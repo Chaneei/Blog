@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">CHAN</span>
-        <span className="headerTitleLg">PLAYGROUND</span>
+        <span className="headerTitleSm">Personal</span>
+        <span className="headerTitleLg">Blog</span>
       </div>
       <img
         className="headerImg"
