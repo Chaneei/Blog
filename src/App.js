@@ -1,13 +1,13 @@
-import Header from "./header/Header";
+import Topbar from "./components/topbar/Topbar";
+import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
-import Topbar from "./topbar/Topbar";
+import Single from "./pages/single/Single";
 
 function App() {
   return (
     <div className="App">
       <Topbar />
-      <Header />
-      <Home />
+      <Single />
     </div>
   );
 }

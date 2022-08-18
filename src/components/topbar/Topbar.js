@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <div className="top">
       <div className="topLeft">
-        <a className="topIcon">Dev.Chan</a>
+        <a className="topIcon">⚽FB</a>
       </div>
       <div className="topCenter">
         <ul className="topList">
