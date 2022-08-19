@@ -1,41 +1,59 @@
 import React from "react";
 import "./topbar.css";
+import { useNavigate, Link } from "react-router-dom";
+
 const Topbar = () => {
-  const user = true;
+  const navigate = useNavigate();
+  const clickLogo = () => {
+    navigate("/");
+  };
+  const user = false;
   return (
     <div className="top">
       <div className="topLeft">
-        <a className="topIcon">⚽FB</a>
+        <Link to="/" className="topIcon">
+          CHAN`S
+        </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
-          <li className="topListItem">HOME</li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
-          <li className="topListItem">WRITE</li>
-          <li className="topListItem">LOGOUT</li>
+          <li className="topListItem">
+            <Link to="/">HOME</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/">ABOUT</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/">CONTACT</Link>
+          </li>
+          <li className="topListItem">
+            <Link to="/write" className="link">
+              WRITE
+            </Link>
+          </li>
+          {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>
       <div className="topRight">
         {user ? (
-          <a className="link" to="/settings">
+          <Link className="link" to="/settings">
             <img
               className="topImg"
               src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
             />
-          </a>
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
-              <a className="link" to="/login">
+              <Link to="/login" className="link">
                 LOGIN
-              </a>
+              </Link>
             </li>
             <li className="topListItem">
-              <a className="link" to="/register">
+              <Link to="/register" className="link">
                 REGISTER
-              </a>
+              </Link>
             </li>
           </ul>
         )}

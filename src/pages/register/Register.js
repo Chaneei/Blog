@@ -1,5 +1,7 @@
 import React from "react";
 import "./register.css";
+import { Link } from "react-router-dom";
+
 const Register = () => {
   return (
     <div className="register">
@@ -24,7 +26,10 @@ const Register = () => {
           className="registerInput"
         />
         <input className="registerButton" type="button" value="Login" />
-        <input className="registerLoginButton" type="button" value="Register" />
+        <input className="registerLoginButton" type="button" value="Login" />
+        <button className="registerLoginButton">
+          <Link to="/register">Register</Link>
+        </button>
       </form>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post.css";
 const Post = ({ img }) => {
   return (
@@ -6,11 +7,17 @@ const Post = ({ img }) => {
       <img className="postImg" src={img} alt="postImg" />
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">Music</span>
-          <span className="postCat">Life</span>
+          <Link className="link" to="/posts?cat=Music">
+            Music
+          </Link>
+          <Link className="link" to="/posts?cat=Music">
+            Life
+          </Link>
         </div>
         <span className="postTitle">
-          Transfer window latest and Premier League news conferences
+          <Link to="/post/abc">
+            Transfer window latest and Premier League news conferences
+          </Link>
         </span>
         <hr />
         <span className="postDate">1 hour ago</span>

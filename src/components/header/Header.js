@@ -1,11 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./header.css";
 const Header = () => {
+  const navigate = useNavigate();
+  const clickLogo = () => {
+    navigate("/");
+  };
   return (
     <div className="header">
       <div className="headerTitles">
-        <span className="headerTitleSm">Football</span>
-        <span className="headerTitleLg">Blog</span>
+        <span className="headerTitleLg">Chan`s Blog</span>
       </div>
       <img
         className="headerImg"
