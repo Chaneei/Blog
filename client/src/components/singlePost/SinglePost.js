@@ -1,16 +1,28 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./singlePost.css";
 const SinglePost = () => {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data);
+    };
+    getPost();
+  }, [path]);
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        <img
-          src="https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/73F5/production/_126358692_bbc-sport-index-imagery-3-split-images-gradient-07862216-08a1-4847-b2a4-1dad5fe66b6e.png"
-          alt="postimg"
-          className="singlePostImg"
-        />
+        {post.photo && (
+          <img src={post.photo} alt="postimg" className="singlePostImg" />
+        )}
+
         <h1 className="singlePostTitle">
-          Transfer window latest and Premier League news conferences
+          {post.title}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -18,20 +30,12 @@ const SinglePost = () => {
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Author: <b>Chan</b>
+            Author: <b>{post.username}</b>
           </span>
-          <span>1 hour ago</span>
+          <span>{new Date(post.createdAt).toDateString()}</span>
         </div>
         <p className="singlePostDesc">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-          officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-          fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-          atque, exercitationem quibusdam, reiciendis odio laboriosam?
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-          officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-          fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-          atque, exercitationem quibusdam, reiciendis odio laboriosam?
+          {post.desc}
           <br />
         </p>
       </div>
