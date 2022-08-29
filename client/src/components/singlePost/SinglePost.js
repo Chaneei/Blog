@@ -5,11 +5,14 @@ import { Context } from "../../context/Context";
 import "./singlePost.css";
 const SinglePost = () => {
   const PF = "http://localhost:5000/images/";
+  const { user } = useContext(Context);
 
   const location = useLocation();
   const path = location.pathname.split("/")[2];
+
   const [post, setPost] = useState({});
-  const { user } = useContext(Context);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
 
   useEffect(() => {
     const getPost = async () => {
@@ -18,6 +21,15 @@ const SinglePost = () => {
     };
     getPost();
   }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/posts/${post._id}`, {
+        data: { username: user.username },
+      });
+      window.location.replace("/");
+    } catch (err) {}
+  };
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -27,10 +39,13 @@ const SinglePost = () => {
 
         <h1 className="singlePostTitle">
           {post.title}
-          {post.username === user.username && (
+          {post.username === user?.username && (
             <div className="singlePostEdit">
               <i className="singlePostIcon far fa-edit"></i>
-              <i className="singlePostIcon far fa-trash-alt"></i>
+              <i
+                className="singlePostIcon far fa-trash-alt"
+                onClick={handleDelete}
+              ></i>
             </div>
           )}
         </h1>
