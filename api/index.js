@@ -12,6 +12,7 @@ const port = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 //json 형태 Object을 사용할 수 있게 해줌
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
