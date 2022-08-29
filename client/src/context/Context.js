@@ -1,7 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
 import Reducer from "./Reducer";
 
-/**초기값 */
 const INITIAL_STATE = {
   user: JSON.parse(localStorage.getItem("user")) || null,
   isFetching: false,
