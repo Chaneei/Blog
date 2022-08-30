@@ -1,5 +1,5 @@
 .login {
-  height: calc(100vh - 50px);
+  height: calc(100vh);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,16 +14,19 @@
 
 .loginTitle {
   font-size: 50px;
+  font-weight: 700;
 }
 
 .loginForm {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .loginForm > label {
   margin: 10px 0;
+  font-weight: 600;
 }
 
 .loginInput {
@@ -53,10 +56,10 @@
 }
 
 .loginRegisterButton {
+  width: 100%;
   position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: teal;
+  bottom: -50px;
+  background-color: #444;
   cursor: pointer;
   padding: 10px;
   border: none;

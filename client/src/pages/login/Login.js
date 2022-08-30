@@ -24,7 +24,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <span className="loginTitle">Login</span>
+      <span className="loginTitle">LOGIN</span>
       <form className="loginForm" onSubmit={handleSubmit}>
         <label>Username</label>
         <input
@@ -43,10 +43,10 @@ const Login = () => {
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
+        <button className="loginRegisterButton" type="button">
+          <Link to="/register">Register</Link>
+        </button>
       </form>
-      <button className="loginRegisterButton">
-        <Link to="/register">Register</Link>
-      </button>
     </div>
   );
 };

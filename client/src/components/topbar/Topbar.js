@@ -14,7 +14,7 @@ const Topbar = () => {
     <div className="top">
       <div className="topLeft">
         <Link to="/" className="topIcon">
-          CHAN`S
+          NIKE
         </Link>
       </div>
       <div className="topCenter">
@@ -59,7 +59,6 @@ const Topbar = () => {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );

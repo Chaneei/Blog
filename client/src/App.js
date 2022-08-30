@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Router>
-        <Topbar />
+        {user ? <Topbar /> : <div></div>}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<Home />} />
