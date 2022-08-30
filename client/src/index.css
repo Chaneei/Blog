@@ -17,10 +17,10 @@ li,
 ol {
   list-style: none;
 }
-/* body {
+body {
   -ms-overflow-style: none;
 }
 
 ::-webkit-scrollbar {
   display: none;
-} */
+}

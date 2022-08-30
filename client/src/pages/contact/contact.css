@@ -1,0 +1,11 @@
+.contact {
+  height: 100vh;
+  padding-top: 50px;
+  background-image: url("https://images.unsplash.com/photo-1641687589434-a86e8de59855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

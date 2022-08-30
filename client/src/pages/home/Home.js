@@ -32,12 +32,12 @@ const Home = () => {
         </>
       ) : (
         <div className="homeMain">
-          <p>WELCOME TO MY BLOG ❤</p>
+          <p>WELCOME TO MY BLOG 💥</p>
           <Link to="/register">
-            <span className="mainNotice">Please make your accout ❌</span>
+            <span className="mainNotice">Please make your accout 🔒</span>
           </Link>
           <Link to="/login">
-            <span className="mainNotice">If I already have account ⭕</span>
+            <span className="mainNotice">If U already have account 🔑</span>
           </Link>
         </div>
       )}

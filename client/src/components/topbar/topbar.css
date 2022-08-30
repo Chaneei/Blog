@@ -1,8 +1,8 @@
 .top {
   width: 100%;
-  height: 50px;
-  background-color: white;
+  height: 60px;
   position: absolute;
+  background-color: transparent;
   top: 0;
   display: flex;
   z-index: 999;
@@ -19,9 +19,9 @@
 }
 
 .topIcon {
-  font-size: 30px;
+  font-size: 2.2rem;
   margin-right: 10px;
-  color: #444;
+  color: black;
   cursor: pointer;
 }
 
@@ -38,9 +38,11 @@
 
 .topListItem {
   margin-right: 20px;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: -1px;
   cursor: pointer;
+  color: black;
 }
 
 .topListItem:hover {
@@ -48,16 +50,26 @@
 }
 
 .topImg {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 15px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.topSearchIcon {
-  font-size: 18px;
-  color: #666;
+.topUsername {
+  font-size: 1.4rem;
+  color: black;
+  margin-right: 20px;
+}
+
+.toplogout {
+  font-size: 1.3rem;
   cursor: pointer;
 }
+/* .topSearchIcon {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+} */
