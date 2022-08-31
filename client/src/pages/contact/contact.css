@@ -1,11 +1,86 @@
 .contact {
   height: 100vh;
   padding-top: 50px;
-  background-image: url("https://images.unsplash.com/photo-1641687589434-a86e8de59855?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80");
+  background-image: url("https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.contactTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.contactTitle span {
+  font-size: 1.5rem;
+}
+.contactTitle h1 {
+  font-size: 3rem;
+}
+.contactWrap {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 30% 60%;
+  gap: 10%;
+}
+
+.contactSns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contactOption {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+.contactOption h4 {
+  margin-bottom: 0.5rem;
+}
+.contactOption h5 {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.contactOption a {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.contacticon {
+  font-size: 30px;
+  margin-bottom: 0.5rem;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.contactName,
+.contactEmail {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+}
+.contactContent {
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  resize: none;
+}
+.contentBtn {
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  border: 1px solid #444;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }

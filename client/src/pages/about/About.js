@@ -6,18 +6,9 @@ const About = () => {
     <>
       <div className="about">
         <div className="aboutText">
-          <span className="aboutTitle" style={{ fontSize: "1.8rem" }}>
-            About us
-          </span>
-          <br />
-          <span className="aboutTitle">We Like To Share</span>
-          <br />
-          <span className="aboutTitle">
-            <strong>Stories, News, And Ideas</strong>
-          </span>
-
-          <br />
-          <span className="aboutTitle">with you</span>
+          <span className="aboutTitle">About us</span>
+          <h1>We Like To Share</h1>
+          <h1>Stories, News, And Ideas with you</h1>
         </div>
       </div>
     </>

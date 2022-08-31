@@ -34,10 +34,10 @@ const Home = () => {
         <div className="homeMain">
           <p>WELCOME TO MY BLOG 💥</p>
           <Link to="/register">
-            <span className="mainNotice">Please make your accout 🔒</span>
+            <span className="mainNotice">U Don`t have accout 🔒</span>
           </Link>
           <Link to="/login">
-            <span className="mainNotice">If U already have account 🔑</span>
+            <span className="mainNotice">Already have account 🔑</span>
           </Link>
         </div>
       )}

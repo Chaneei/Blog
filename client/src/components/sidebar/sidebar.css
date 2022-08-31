@@ -2,7 +2,6 @@
   flex: 3;
   height: fit-content;
   margin: 20px;
-  margin-top: 60px;
   padding-bottom: 30px;
   background-color: #fdfbfb;
   border-radius: 10px;
@@ -53,8 +52,11 @@
   margin-top: 15px;
   cursor: pointer;
   text-align: center;
+  font-weight: 600;
 }
-
+.sidebarListItem:hover {
+  color: #a7a4a4;
+}
 .sidebarSocial {
   margin-top: 15px;
   width: 250px;
@@ -66,4 +68,7 @@
 .sidebarIcon {
   font-size: 16px;
   margin-left: 10px;
+}
+.sidebarIcon:hover {
+  color: #a7a4a4;
 }
