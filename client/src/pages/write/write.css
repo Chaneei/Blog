@@ -1,41 +1,73 @@
 .write {
-  padding-top: 50px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
+.writeTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 .writeImg {
-  margin-left: 150px;
   width: 70vw;
+  height: 30vh;
+  object-fit: cover;
   border-radius: 10px;
 }
+.filePut {
+  width: 70vw;
+  height: 30vh;
+  border: 2px solid #444;
+  border-style: dashed;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.filePut h4 {
+  color: #444;
+}
 .writeForm {
+  width: 60vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .writeFormGroup {
-  margin-left: 150px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .writeIcon {
   width: 25px;
   height: 25px;
-  font-size: 20px;
+  font-size: 1rem;
   border: 1px solid;
   border-radius: 50%;
-  color: rgb(129, 125, 125);
+  color: #444;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 
 .writeInput {
-  font-size: 30px;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 60vw;
+  resize: none;
   border: none;
-  padding: 20px;
-  width: 70vw;
 }
 
 .writeInput::placeholder {
@@ -46,25 +78,29 @@
 .writeInput:focus {
   outline-style: none;
 }
-
+.writeMiddle {
+  width: 10%;
+}
 .writeText {
-  width: 70vw;
-  height: 100vh;
+  width: 60vw;
+  height: 40vh;
   font-family: inherit;
-  font-size: 20px;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .writeSubmit {
-  position: absolute;
-  top: 20px;
-  right: 50px;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
   color: white;
-  background-color: teal;
-  padding: 10px;
+  background-color: #444;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 }

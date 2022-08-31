@@ -35,24 +35,30 @@ const Write = () => {
   };
   return (
     <div className="write">
-      {file && (
-        <img
-          src={URL.createObjectURL(file)}
-          alt="writeimg"
-          className="writeImg"
-        />
-      )}
-      <form className="writeForm" onSubmit={handleSubmit}>
-        <div className="writeFormGroup">
-          <label htmlFor="fileInput">
-            <i className="writeIcon fas fa-plus"></i>
-          </label>
-          <input
-            type="file"
-            id="fileInput"
-            style={{ display: "none" }}
-            onChange={(e) => setFile(e.target.files[0])}
+      <div className="writeTop">
+        {file ? (
+          <img
+            src={URL.createObjectURL(file)}
+            alt="writeimg"
+            className="writeImg"
           />
+        ) : (
+          <div className="filePut">
+            <h4>PUT YOUR IMG FILE</h4>
+          </div>
+        )}
+      </div>
+      <form className="writeForm" onSubmit={handleSubmit}>
+        <label htmlFor="fileInput">
+          <i className="writeIcon fas fa-plus"></i>
+        </label>
+        <input
+          type="file"
+          id="fileInput"
+          style={{ display: "none" }}
+          onChange={(e) => setFile(e.target.files[0])}
+        />
+        <div className="writeFormGroup">
           <input
             type="text"
             placeholder="Title"
@@ -61,6 +67,8 @@ const Write = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
+        <div></div>
+        <hr className="writeMiddle" />
         <div className="writeFormGroup">
           <textarea
             placeholder="Tell your story..."

@@ -17,6 +17,10 @@ li,
 ol {
   list-style: none;
 }
+button,
+input {
+  border: none;
+}
 body {
   -ms-overflow-style: none;
 }
