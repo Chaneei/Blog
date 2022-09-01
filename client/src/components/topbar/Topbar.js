@@ -12,6 +12,7 @@ const Topbar = () => {
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+    localStorage.clear();
   };
   return (
     <div className="top">
@@ -41,9 +42,21 @@ const Topbar = () => {
       <div className="topRight">
         {user ? (
           <>
-            <Link className="link" to="/settings">
-              <img className="topImg" src={PF + user.profilePic} alt="" />
-            </Link>
+            {user.profilePic ? (
+              <Link className="link" to="/settings">
+                <img className="topImg" src={PF + user.profilePic} alt="" />
+              </Link>
+            ) : (
+              <>
+                <Link className="link" to="/settings">
+                  <img
+                    className="topImg"
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                    alt=""
+                  />
+                </Link>
+              </>
+            )}
             <span className="topUsername">{user.username}</span>
             <i
               onClick={handleLogout}

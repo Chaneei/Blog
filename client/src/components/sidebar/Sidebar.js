@@ -14,16 +14,26 @@ const Sidebar = () => {
     };
     getCats();
   }, []);
+  console.log(cats);
+
   const { user } = useContext(Context);
   const PF = "http://localhost:5000/images/";
   return (
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
-        <img src={PF + user.profilePic} />
+        {user.profilePic ? (
+          <img src={PF + user.profilePic} alt="me" />
+        ) : (
+          <>
+            <img
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt=""
+            />
+          </>
+        )}
         <p>
-          나이키의 여러가지 상품에 대한 관심과 신발 수집에 대한 취미를 가지고
-          있는 <i>{user.username}</i> 입니다.
+          환영합니다 <i>{user.username}</i> 님
         </p>
       </div>
       <div className="sidebarItem">

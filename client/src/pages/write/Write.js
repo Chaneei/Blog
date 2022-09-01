@@ -1,13 +1,25 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./write.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import { Link } from "react-router-dom";
 
 const Write = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
+  const [categories, setCategories] = useState("");
+  const [cats, setCats] = useState([]);
   const { user } = useContext(Context);
+
+  useEffect(() => {
+    const getCats = async () => {
+      const res = await axios.get("/categories");
+      setCats(res.data);
+    };
+    getCats();
+  }, []);
+  // console.log(cats);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +27,7 @@ const Write = () => {
       username: user.username,
       title,
       desc,
+      categories,
     };
     if (file) {
       const data = new FormData();
@@ -48,6 +61,7 @@ const Write = () => {
           </div>
         )}
       </div>
+
       <form className="writeForm" onSubmit={handleSubmit}>
         <label htmlFor="fileInput">
           <i className="writeIcon fas fa-plus"></i>
@@ -58,6 +72,21 @@ const Write = () => {
           style={{ display: "none" }}
           onChange={(e) => setFile(e.target.files[0])}
         />
+        <div className="categoryGroup">
+          <h4>SELECT CATEGORY</h4>
+          <div className="optionWrap">
+            {cats.map((c, index) => (
+              <button
+                type="button"
+                className="catOption"
+                value={c.name}
+                onClick={(e) => setCategories(e.target.value)}
+              >
+                {c.name}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className="writeFormGroup">
           <input
             type="text"
@@ -67,7 +96,6 @@ const Write = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div></div>
         <hr className="writeMiddle" />
         <div className="writeFormGroup">
           <textarea

@@ -19,6 +19,7 @@ const Post = ({ post }) => {
           <span className="postTitle">{post.title}</span>
         </Link>
         <hr />
+        <span>{post.categories}</span>
         <span className="postDate">
           {new Date(post.createdAt).toDateString()}
         </span>

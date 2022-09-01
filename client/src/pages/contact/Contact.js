@@ -40,7 +40,7 @@ const Contact = () => {
             <div className="contactOption">
               <i className="contacticon fab fa-instagram-square"></i>
               <h4>Instagram</h4>
-              <h5>@chan.growing.up</h5>
+              {/* <h5>@chan.growing.up</h5> */}
               <a href="https://www.instagram.com" target="_blank">
                 Send a message
               </a>
@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="contactOption">
               <i class="contacticon fa-solid fa-comment"></i>
               <h4>Kakao Talk</h4>
-              <h5>frostworm</h5>
+              {/* <h5>frostworm</h5> */}
               <a href="https://open.kakao.com/o/s6a8AGie" target="_blank">
                 Send a message
               </a>
