@@ -1,4 +1,4 @@
-# Chan Blog
+# 🎨 Chan Blog
 
 <p align='center'>
 <img width="80%" alt="nweet_main" src="https://chan-portfolio-site.web.app/static/media/portfolio4.0688620350c372cafda3.PNG">
