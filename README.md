@@ -21,7 +21,7 @@
 
 ## 🔥 Introducing Project
 #### 🗨 나만의 블로그 만들기!!!
-🔓 DB관리는 mongoDB로, 백은 node.js와 express.js로!
+🔓 DB관리는 mongoDB로, 백은 node.js로!
 
 #### 🔎 나만의 글을 써보자
 최초 화면에서 계정생성 후 로그인하여 다른 사람들이 작성한 글들과 함께 나만의 글을 작성할 수 있는 사이트를 만들어보았습니다. 
